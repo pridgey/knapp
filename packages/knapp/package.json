@@ -1,0 +1,35 @@
+{
+  "name": "@pridgey/knapp",
+  "version": "0.0.0",
+  "description": "An all-in-one react component library",
+  "author": "Etlas <musicinsilence13@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/knapp.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "snowpack build"
+  },
+  "dependencies": {
+    "@pridgey/knapp-button": "^0.0.0",
+    "@pridgey/knapp-text": "^0.0.0",
+    "styled-components": "^5.2.0",
+    "typescript": "^4.0.3"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-webpack": "^2.0.16",
+    "@types/react": "^16.9.52",
+    "@types/styled-components": "^5.1.4",
+    "snowpack": "^2.14.0"
+  }
+}

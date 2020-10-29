@@ -1,0 +1,21 @@
+{
+  "name": "@pridgey/knapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A monorepo react component library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "styled-components": "^5.2.0"
+  }
+}

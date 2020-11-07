@@ -1,6 +1,6 @@
 {
   "name": "@pridgey/knapp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An all-in-one react component library",
   "author": "Etlas <musicinsilence13@gmail.com>",
   "homepage": "",
@@ -21,8 +21,8 @@
     "build": "snowpack build"
   },
   "dependencies": {
-    "@pridgey/knapp-button": "^0.0.1",
-    "@pridgey/knapp-text": "^0.0.1",
+    "@pridgey/knapp-button": "^0.0.2",
+    "@pridgey/knapp-text": "^0.0.2",
     "esbuild": "^0.8.4",
     "styled-components": "^5.2.0",
     "typescript": "^4.0.3"

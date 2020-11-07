@@ -13,9 +13,6 @@
   "files": [
     "lib"
   ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "esbuild index.tsx --bundle --outfile=index.js --define:process.env.NODE_ENV='production'"
@@ -34,5 +31,6 @@
     "esbuild": "^0.8.4",
     "styled-components": "^5.2.0",
     "typescript": "^4.0.3"
-  }
+  },
+  "gitHead": "0db94446a429167693c7273055c721df57561cf1"
 }

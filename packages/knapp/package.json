@@ -23,6 +23,7 @@
   "dependencies": {
     "@pridgey/knapp-button": "^0.0.0",
     "@pridgey/knapp-text": "^0.0.0",
+    "esbuild": "^0.8.4",
     "styled-components": "^5.2.0",
     "typescript": "^4.0.3"
   },

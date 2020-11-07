@@ -1,10 +1,14 @@
 {
-  "packages": ["packages/*"],
-  "version": "0.0.0",
+  "packages": [
+    "packages/*"
+  ],
+  "version": "0.0.1",
   "useWorkspaces": true,
   "npmClient": "yarn",
   "stream": true,
   "bootstrap": {
-    "npmClientArgs": ["--no-package-lock"]
+    "npmClientArgs": [
+      "--no-package-lock"
+    ]
   }
 }

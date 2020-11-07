@@ -6,6 +6,7 @@
   "homepage": "",
   "license": "ISC",
   "main": "lib/knapp.js",
+  "private":"true",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -30,5 +31,5 @@
     "@types/styled-components": "^5.1.4",
     "snowpack": "^2.14.0"
   },
-  "gitHead": "0db94446a429167693c7273055c721df57561cf1"
+  "gitHead": "9cd879abcd4af9872228f625289a5b449e863b4b"
 }

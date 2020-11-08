@@ -5,7 +5,8 @@
   "keywords": [],
   "author": "Etlas <musicinsilence13@gmail.com>",
   "license": "ISC",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -18,7 +19,8 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "esbuild index.tsx --bundle --outfile=index.js --define:process.env.NODE_ENV='production'"
+    "prebuild": "tsc",
+    "build": "esbuild src/index.tsx --bundle --outfile=dist/index.js --define:process.env.NODE_ENV='production'"
   },
   "devDependencies": {
     "@snowpack/plugin-webpack": "^2.0.16",

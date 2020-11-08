@@ -1,13 +1,12 @@
 {
   "name": "@pridgey/knapp-button",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "I'm a button",
   "keywords": [],
   "author": "Etlas <musicinsilence13@gmail.com>",
   "license": "ISC",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-
   "publishConfig": {
     "access": "public"
   },

@@ -1,21 +1,24 @@
 {
-  "name": "@pridgey/knapp",
+  "name": "knapp",
   "version": "1.0.0",
-  "private": true,
-  "description": "A monorepo react component library",
-  "main": "index.js",
+  "description": "A solid-js component library",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "vite"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
+  "author": "Taylor Pridgen",
+  "license": "MIT",
   "dependencies": {
-    "styled-components": "^5.2.0"
+    "@stitches/core": "^1.2.8",
+    "solid-js": "^1.5.7"
+  },
+  "engines": {
+    "node": ">= 16"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.23",
+    "typescript": "^4.8.4",
+    "vite": "^3.1.4",
+    "vite-plugin-solid": "^2.3.9",
+    "vite-tsconfig-paths": "^3.5.1"
   }
 }

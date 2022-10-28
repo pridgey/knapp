@@ -1,8 +1,9 @@
 import { css } from "./../Theme";
 
 const buttonStyles = css({
-  backgroundColor: "$background",
-  color: "$foreground",
+  backgroundColor: "$blue",
+  color: "$background",
+  fontWeight: "bold",
   border: "0px",
   borderRadius: "$xs",
   padding: "$xl $md",

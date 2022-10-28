@@ -29,7 +29,7 @@ export const { createTheme, css } = createStitches({
 });
 
 export const darkTheme = createTheme("darkTheme", {
-  color: {
+  colors: {
     background: "#090C08",
     black: "#090C08",
     blue: "#63B0CD",
@@ -44,7 +44,7 @@ export const darkTheme = createTheme("darkTheme", {
 });
 
 export const lightTheme = createTheme("lightTheme", {
-  color: {
+  colors: {
     background: "#F4F5F6",
     black: "#090C08",
     blue: "#2F546A",

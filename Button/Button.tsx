@@ -3,9 +3,11 @@ import { css } from "./../Theme";
 const buttonStyles = css({
   backgroundColor: "$blue",
   color: "$background",
-  fontWeight: "bold",
+  fontWeight: "normal",
   border: "0px",
-  borderRadius: "$xs",
+  borderRadius: "$md",
+  fontFamily: "unset",
+  fontSize: "$lg",
   padding: "$xl $md",
   cursor: "pointer",
   "&:hover": {

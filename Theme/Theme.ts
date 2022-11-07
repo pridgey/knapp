@@ -9,13 +9,24 @@ export const { createTheme, css } = createStitches({
       lg: "16px",
       xl: "20px",
     },
-    fontSizes: {},
-    fonts: {},
+    fontSizes: {
+      xs: "0.5rem",
+      sm: "0.75rem",
+      md: "1rem",
+      lg: "1.3rem",
+      xl: "1.5rem",
+    },
+    fonts: {
+      serif: "Baskerville, 'Times New Roman', Times, serif",
+      sansSerif: "GillSans, Calibri, Trebuchet, sans-serif",
+    },
     fontWeights: {},
     lineHeights: {},
     letterSpacings: {},
     sizes: {},
-    borderWidths: {},
+    borderWidths: {
+      md: "1px",
+    },
     borderStyles: {},
     radii: {
       xs: "4px",

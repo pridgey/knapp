@@ -1,14 +1,19 @@
-import { Button } from "./index";
+import { Button, Input } from "./index";
 import { render } from "solid-js/web";
 import { css, darkTheme, lightTheme } from "./Theme";
 import { globalCss } from "@stitches/core";
 
 const globalStyles = globalCss({
+  "@font-face": {
+    fontFamily: "PoliteType",
+    src: `url("PoliteType.ttf")`,
+  },
   html: {
     margin: 0,
     padding: 0,
     width: "100vw",
     height: "100vh",
+    fontFamily: "PoliteType",
   },
   body: {
     margin: 0,
@@ -34,6 +39,9 @@ const themeContainerStyles = css({
   height: "100%",
   padding: "15px",
   backgroundColor: "$background",
+  display: "flex",
+  flexDirection: "column",
+  gap: "$md",
 });
 
 globalStyles();
@@ -48,6 +56,7 @@ const ComponentBook = () => {
         }}
       >
         <Button aria-label="hello" />
+        <Input Label="Text Input" />
       </div>
       <div
         aria-label="dark theme container"
@@ -57,6 +66,7 @@ const ComponentBook = () => {
         }}
       >
         <Button />
+        <Input Label="Text Input" />
       </div>
     </main>
   );

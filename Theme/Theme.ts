@@ -1,6 +1,6 @@
 import { createStitches } from "@stitches/core";
 
-export const { createTheme, css } = createStitches({
+export const { createTheme, css, getCssText } = createStitches({
   theme: {
     space: {
       xs: "4px",
@@ -38,6 +38,8 @@ export const { createTheme, css } = createStitches({
     shadows: {},
   },
 });
+
+console.log("CSS:", getCssText());
 
 export const darkTheme = createTheme("darkTheme", {
   colors: {

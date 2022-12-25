@@ -1,0 +1,31 @@
+:root {
+  --font-primary: "Baskerville, 'Times New Roman', Times, serif";
+  --font-secondary: "GillSans, Calibri, Trebuchet, sans-serif";
+  --color-background: "#F4F5F6";
+  --color-black: "#090C08";
+  --color-blue: "#2F546A";
+  --color-foreground: "#090C08";
+  --color-gray: "#36393B";
+  --color-green: "#2A4D14";
+  --color-orange: "#75450C";
+  --color-purple: "#693668";
+  --color-red: "#AD1F2D";
+  --color-white: "#F4F5F6";
+  --color-primary: var(--color-blue);
+  --color-secondary: var(--color-purple);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: "#090C08";
+    --color-black: "#090C08";
+    --color-blue: "#63B0CD";
+    --color-foreground: "#F4F5F6";
+    --color-gray: "#A7AAA4";
+    --color-green: "#37A748";
+    --color-orange: "#F18805";
+    --color-purple: "#D232FF";
+    --color-red: "#E43A4B";
+    --color-white: "#F4F5F6";
+  }
+}

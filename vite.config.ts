@@ -19,7 +19,7 @@ export default defineConfig({
       fileName: (format) => `knapp.solid.${format}.js`,
     },
     rollupOptions: {
-      external: [],
+      external: ["solid-start"],
       output: {
         globals: {
           "solid-js": "solid-js",

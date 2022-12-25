@@ -12,10 +12,49 @@
     <title>Knapp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <style>
+      @font-face {
+        font-family: "PoliteType";
+        src: url("PoliteType.ttf");
+      }
+
+      html, body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      html {
+        width: 100vw;
+        height: 100vh;
+        font-family: "PoliteType", sans-serif;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .book_page {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .theme_container {
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+        background-color: var(--color-background);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

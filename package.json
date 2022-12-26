@@ -10,8 +10,8 @@
   "files": [
     "dist"
   ],
-  "main": "dist/knapp.solid.umd.js",
-  "module": "dist/knapp.solid.es.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "author": "Taylor Pridgen",
   "license": "MIT",

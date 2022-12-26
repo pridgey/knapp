@@ -12,6 +12,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    ssr: true,
     lib: {
       entry: path.resolve(__dirname, "index.ts"),
       name: "knapp",

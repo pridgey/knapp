@@ -5,13 +5,14 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "buildrollup": "rollup -c rollup.config.ts"
+    "postbuild": "tsc"
   },
   "files": [
     "dist"
   ],
   "main": "dist/knapp.solid.umd.js",
   "module": "dist/knapp.solid.es.js",
+  "types": "dist/index.d.ts",
   "author": "Taylor Pridgen",
   "license": "MIT",
   "dependencies": {
@@ -22,14 +23,12 @@
     "node": ">= 16"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.7",
     "@types/node": "^18.7.23",
     "rollup-preset-solid": "^1.4.0",
     "typescript": "^4.8.4",
-    "vite": "^3.1.4",
+    "vite": "^4.0.3",
     "vite-plugin-solid": "^2.3.9",
     "vite-tsconfig-paths": "^3.5.1"
-  },
-  "optionalDependencies": {
-    "solid-start": "^0.2.0"
   }
 }

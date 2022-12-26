@@ -12,7 +12,6 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "esnext",
     lib: {
       entry: path.resolve(__dirname, "index.ts"),
       name: "knapp",
@@ -21,6 +20,8 @@ export default defineConfig({
     rollupOptions: {
       external: ["solid-start"],
       output: {
+        esModule: true,
+        exports: "auto",
         globals: {
           "solid-js": "solid-js",
         },

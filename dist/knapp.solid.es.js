@@ -13,49 +13,49 @@ const D = (t, e) => t === e, x = {
   equals: D
 };
 let N = A;
-const b = 1, p = 2, O = {
+const b = 1, p = 2, j = {
   owned: null,
   cleanups: null,
   context: null,
   owner: null
 };
 var i = null;
-let a = null, s = null, u = null, f = null, y = 0;
+let a = null, l = null, u = null, f = null, y = 0;
 function _(t, e, r) {
   r = r ? Object.assign({}, x, r) : x;
-  const n = j(t, e, !0, 0);
-  return n.observers = null, n.observerSlots = null, n.comparator = r.equals || void 0, C(n), U.bind(n);
+  const n = q(t, e, !0, 0);
+  return n.observers = null, n.observerSlots = null, n.comparator = r.equals || void 0, C(n), O.bind(n);
 }
 function g(t) {
-  const e = s;
-  s = null;
+  const e = l;
+  l = null;
   try {
     return t();
   } finally {
-    s = e;
+    l = e;
   }
 }
-function U() {
+function O() {
   const t = a;
   if (this.sources && (this.state || t))
     if (this.state === b || t)
       C(this);
     else {
       const e = u;
-      u = null, m(() => v(this), !1), u = e;
+      u = null, d(() => v(this), !1), u = e;
     }
-  if (s) {
+  if (l) {
     const e = this.observers ? this.observers.length : 0;
-    s.sources ? (s.sources.push(this), s.sourceSlots.push(e)) : (s.sources = [this], s.sourceSlots = [e]), this.observers ? (this.observers.push(s), this.observerSlots.push(s.sources.length - 1)) : (this.observers = [s], this.observerSlots = [s.sources.length - 1]);
+    l.sources ? (l.sources.push(this), l.sourceSlots.push(e)) : (l.sources = [this], l.sourceSlots = [e]), this.observers ? (this.observers.push(l), this.observerSlots.push(l.sources.length - 1)) : (this.observers = [l], this.observerSlots = [l.sources.length - 1]);
   }
   return this.value;
 }
-function H(t, e, r) {
+function U(t, e, r) {
   let n = t.value;
-  return (!t.comparator || !t.comparator(n, e)) && (t.value = e, t.observers && t.observers.length && m(() => {
+  return (!t.comparator || !t.comparator(n, e)) && (t.value = e, t.observers && t.observers.length && d(() => {
     for (let o = 0; o < t.observers.length; o += 1) {
-      const l = t.observers[o], c = a && a.running;
-      c && a.disposed.has(l), (c && !l.tState || !c && !l.state) && (l.pure ? u.push(l) : f.push(l), l.observers && T(l)), c || (l.state = b);
+      const s = t.observers[o], c = a && a.running;
+      c && a.disposed.has(s), (c && !s.tState || !c && !s.state) && (s.pure ? u.push(s) : f.push(s), s.observers && T(s)), c || (s.state = b);
     }
     if (u.length > 1e6)
       throw u = [], new Error();
@@ -65,20 +65,20 @@ function C(t) {
   if (!t.fn)
     return;
   E(t);
-  const e = i, r = s, n = y;
-  s = i = t, q(t, t.value, n), s = r, i = e;
+  const e = i, r = l, n = y;
+  l = i = t, H(t, t.value, n), l = r, i = e;
 }
-function q(t, e, r) {
+function H(t, e, r) {
   let n;
   try {
     n = t.fn(e);
   } catch (o) {
     t.pure && (t.state = b), $(o);
   }
-  (!t.updatedAt || t.updatedAt <= r) && (t.updatedAt != null && "observers" in t ? H(t, n) : t.value = n, t.updatedAt = r);
+  (!t.updatedAt || t.updatedAt <= r) && (t.updatedAt != null && "observers" in t ? U(t, n) : t.value = n, t.updatedAt = r);
 }
-function j(t, e, r, n = b, o) {
-  const l = {
+function q(t, e, r, n = b, o) {
+  const s = {
     fn: t,
     state: n,
     updatedAt: null,
@@ -91,7 +91,7 @@ function j(t, e, r, n = b, o) {
     context: null,
     pure: r
   };
-  return i === null || i !== O && (i.owned ? i.owned.push(l) : i.owned = [l]), l;
+  return i === null || i !== j && (i.owned ? i.owned.push(s) : i.owned = [s]), s;
 }
 function S(t) {
   const e = a;
@@ -109,10 +109,10 @@ function S(t) {
       C(t);
     else if (t.state === p || e) {
       const o = u;
-      u = null, m(() => v(t, r[0]), !1), u = o;
+      u = null, d(() => v(t, r[0]), !1), u = o;
     }
 }
-function m(t, e) {
+function d(t, e) {
   if (u)
     return t();
   let r = !1;
@@ -128,7 +128,7 @@ function L(t) {
   if (u && (A(u), u = null), t)
     return;
   const e = f;
-  f = null, e.length && m(() => N(e), !1);
+  f = null, e.length && d(() => N(e), !1);
 }
 function A(t) {
   for (let e = 0; e < t.length; e++)
@@ -155,8 +155,8 @@ function E(t) {
     for (; t.sources.length; ) {
       const r = t.sources.pop(), n = t.sourceSlots.pop(), o = r.observers;
       if (o && o.length) {
-        const l = o.pop(), c = r.observerSlots.pop();
-        n < o.length && (l.sourceSlots[c] = n, o[n] = l, r.observerSlots[n] = c);
+        const s = o.pop(), c = r.observerSlots.pop();
+        n < o.length && (s.sourceSlots[c] = n, o[n] = s, r.observerSlots[n] = c);
       }
     }
   if (t.owned) {
@@ -177,9 +177,9 @@ function P(t) {
 function $(t) {
   throw t = P(t), t;
 }
-let z = !1;
-function G(t, e) {
-  if (z && h.context) {
+let G = !1;
+function I(t, e) {
+  if (G && h.context) {
     const r = h.context;
     k(B());
     const n = g(() => t(e || {}));
@@ -187,34 +187,37 @@ function G(t, e) {
   }
   return g(() => t(e || {}));
 }
-function I(t) {
+function M(t) {
   let e = !1;
   const r = t.keyed, n = _(() => t.when, void 0, {
-    equals: (o, l) => e ? o === l : !o == !l
+    equals: (o, s) => e ? o === s : !o == !s
   });
   return _(() => {
     const o = n();
     if (o) {
-      const l = t.children, c = typeof l == "function" && l.length > 0;
-      return e = r || c, c ? g(() => l(o)) : l;
+      const s = t.children, c = typeof s == "function" && s.length > 0;
+      return e = r || c, c ? g(() => s(o)) : s;
     }
     return t.fallback;
   }, void 0, void 0);
 }
-function d(t, ...e) {
+function m(t, ...e) {
 }
-const M = "_button_z5dlc_1", F = {
-  button: M
-}, R = ["<a", ' style="', '">', "</a>"], K = ["<button", ' style="', '"', ">", "</button>"], Z = (t) => (t.BackgroundColor?.includes("--") ? `${t.BackgroundColor}` : t.BackgroundColor?.length && t.BackgroundColor, t.TextColor?.includes("--") ? `${t.TextColor}` : t.TextColor?.length && t.TextColor, t.Href ? d(R, void 0 + (F.button, void 0) + (t.Href, void 0), "background-color:" + void 0 + (";color:" + void 0), (t.children, void 0)) : d(K, void 0 + (F.button, void 0), "background-color:" + void 0 + (";color:" + void 0), (t.Type, void 0), (t.children, void 0))), Q = "_inputlabel_12b66_1", V = "_inputcontrol_12b66_9", W = "_inputerror_12b66_18", w = {
+const R = "_button_f8j04_1", F = {
+  button: R
+}, z = ["<a", ' style="', '">', "</a>"], K = ["<button", ' style="', '"', ">", "</button>"], Z = (t) => {
+  var e, r, n, o;
+  return (e = t.BackgroundColor) != null && e.includes("--") ? `${t.BackgroundColor}` : (r = t.BackgroundColor) != null && r.length && t.BackgroundColor, (n = t.TextColor) != null && n.includes("--") ? `${t.TextColor}` : (o = t.TextColor) != null && o.length && t.TextColor, t.Href ? m(z, void 0 + (F.button, void 0) + (t.Href, void 0), "background-color:" + void 0 + (";color:" + void 0), (t.children, void 0)) : m(K, void 0 + (F.button, void 0), "background-color:" + void 0 + (";color:" + void 0), (t.Type, void 0), (t.children, void 0));
+}, Q = "_inputlabel_svjol_1", V = "_inputcontrol_svjol_17", W = "_inputerror_svjol_35", w = {
   inputlabel: Q,
   inputcontrol: V,
   inputerror: W
-}, J = ["<span", ' role="alert"', ">", "</span>"], X = ["<label", "><!--#-->", '<!--/--><input id="', '"', "><!--#-->", "<!--/--></label>"], tt = (t) => d(X, void 0 + (w.inputlabel, void 0), (t.Label, void 0), `${t.Name, void 0}-input`, (t.Type, void 0) + (t.Placeholder, void 0) + (t.Name, void 0) + (w.inputcontrol, void 0), (G(I, {
+}, J = ["<span", ' role="alert"', ">", "</span>"], X = ["<label", "><!--#-->", '<!--/--><input id="', '"', "><!--#-->", "<!--/--></label>"], tt = (t) => m(X, void 0 + (w.inputlabel, void 0), (t.Label, void 0), `${t.Name, void 0}-input`, (t.Type, void 0) + (t.Placeholder, void 0) + (t.Name, void 0) + (w.inputcontrol, void 0), (I(M, {
   get when() {
     return t.Error;
   },
   get children() {
-    return d(J, void 0, (w.inputerror, void 0), (t.Error, void 0));
+    return m(J, void 0, (w.inputerror, void 0), (t.Error, void 0));
   }
 }), void 0)), Y = `:root{--font-primary: "Baskerville, 'Times New Roman', Times, serif";--font-secondary: "GillSans, Calibri, Trebuchet, sans-serif";--color-background: "#F4F5F6";--color-black: "#090C08";--color-blue: "#2F546A";--color-foreground: "#090C08";--color-gray: "#36393B";--color-green: "#2A4D14";--color-orange: "#75450C";--color-purple: "#693668";--color-red: "#AD1F2D";--color-white: "#F4F5F6";--color-primary: var(--color-blue);--color-secondary: var(--color-purple)}@media (prefers-color-scheme: dark){:root{--color-background: "#090C08";--color-black: "#090C08";--color-blue: "#63B0CD";--color-foreground: "#F4F5F6";--color-gray: "#A7AAA4";--color-green: "#37A748";--color-orange: "#F18805";--color-purple: "#D232FF";--color-red: "#E43A4B";--color-white: "#F4F5F6"}}
 `, et = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({

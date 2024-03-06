@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="shortcut icon"
+      type="image/ico"
+      href="/src/assets/Connections-Icon.png"
+    />
+    <title>Knapp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @font-face {
+        font-family: "PoliteType";
+        src: url("PoliteType.ttf");
+      }
+
+      html, body {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      html {
+        width: 100vw;
+        height: 100vh;
+        font-family: "PoliteType", sans-serif;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .book_page {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+
+      .theme_container {
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+        background-color: var(--color-background);
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <script src="/ComponentBook.tsx" type="module"></script>
+  </body>
+</html>
